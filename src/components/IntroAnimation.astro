@@ -1,0 +1,104 @@
+---
+---
+
+<div id="intro-overlay" class="intro-overlay">
+  <h1 id="intro-title">
+    ¿Tu empresa está lista para pasar cualquier evaluación regulatoria?
+  </h1>
+</div>
+
+<div id="content-scroll" class="content-wrapper">
+  <div class="content-spacer"></div>
+  <slot />
+</div>
+
+<style>
+  .intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 2rem;
+  }
+
+  .intro-overlay h1 {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    line-height: 1.1;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #0f9b0f, #38ef7d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .content-spacer {
+    height: 100vh;
+    width: 100%;
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("intro-overlay");
+    const title = document.getElementById("intro-title");
+    const contentSpacer = document.querySelector(".content-spacer");
+    let hasAnimated = false;
+
+    // Animación entrada
+    gsap.from(title, {
+      duration: 1.2,
+      y: 80,
+      opacity: 0,
+      ease: "power4.out"
+    });
+
+    // Detectar scroll simple
+    document.addEventListener("scroll", () => {
+      if (!hasAnimated && window.scrollY > 50) {
+        hasAnimated = true;
+
+        // Animar el título
+        gsap.to(title, {
+          opacity: 0,
+          y: -500,
+          scale: 2.5,
+          rotationX: 45,
+          filter: "blur(30px)",
+          duration: 1.2,
+          ease: "power2.in"
+        });
+
+        // Desaparecer el overlay
+        gsap.to(overlay, {
+          opacity: 0,
+          duration: 1.5,
+          ease: "power2.in",
+          onComplete: () => {
+            // Eliminar el overlay completamente del DOM
+            overlay.remove();
+            // Eliminar el spacer
+            if (contentSpacer) contentSpacer.remove();
+            // Resetear el scroll para que empiece en el Hero
+            window.scrollTo(0, 0);
+          }
+        });
+      }
+    });
+  });
+</script>
