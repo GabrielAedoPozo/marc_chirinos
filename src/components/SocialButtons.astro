@@ -1,0 +1,93 @@
+---
+// Componente de botones flotantes de redes sociales
+const whatsappNumber = "51932574949";
+const whatsappMessage = "Hola%20Mac%20Chirinos,%20me%20gustaría%20saber%20más...";
+const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
+---
+
+<div class="social-buttons">
+  <a
+    href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+    class="social-button whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Contactar por WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <a
+    href={linkedinUrl}
+    class="social-button linkedin"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Conectar en LinkedIn"
+  >
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
+<style>
+  .social-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .social-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .social-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .social-button:active {
+    transform: scale(0.95);
+  }
+
+  .whatsapp {
+    background-color: #25d366;
+  }
+
+  .whatsapp:hover {
+    background-color: #20ba61;
+  }
+
+  .linkedin {
+    background-color: #0a66c2;
+  }
+
+  .linkedin:hover {
+    background-color: #0854a4;
+  }
+
+  @media (max-width: 768px) {
+    .social-buttons {
+      bottom: 20px;
+      right: 20px;
+      gap: 12px;
+    }
+
+    .social-button {
+      width: 55px;
+      height: 55px;
+      font-size: 24px;
+    }
+  }
+</style>

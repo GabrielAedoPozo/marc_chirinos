@@ -4,6 +4,7 @@ import '@fontsource/onest/500.css';
 import '@fontsource/onest/600.css';
 import '@fontsource/onest/700.css';
 import "../styles/global.css";
+import SocialButtons from '../components/SocialButtons.astro';
 ---
 
 
@@ -17,8 +18,10 @@ import "../styles/global.css";
 		<link rel="icon" href="/favf.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Mac Chirinos</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 	</head>
 	<body>
+		<SocialButtons />
 		<slot />
 	</body>
 </html>
