@@ -1,0 +1,113 @@
+---
+const logos = [
+  { src: '/img/logo1.png', alt: 'Logo 1' },
+  { src: '/img/logo2.jpg', alt: 'Logo 2' },
+  { src: '/img/logo3.png', alt: 'Logo 3' },
+  { src: '/img/logo4.png', alt: 'Logo 4' },
+  { src: '/img/logo5.png', alt: 'Logo 5' },
+  { src: '/img/logo6.jpeg', alt: 'Logo 6' },
+  { src: '/img/logo7.png', alt: 'Logo 7' },
+  { src: '/img/logo8.png', alt: 'Logo 8' },
+  { src: '/img/logo9.jpg', alt: 'Logo 9' },
+  { src: '/img/logo10.png', alt: 'Logo 10' },
+];
+---
+
+<div class="logo-carousel-container">
+  <div class="logo-carousel">
+    <div class="logo-track">
+      {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
+        <div class="logo-item">
+          <img src={logo.src} alt={logo.alt} />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .logo-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0 2rem 0;
+    position: relative;
+  }
+
+  .logo-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .logo-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+  }
+
+  .logo-item {
+    flex-shrink: 0;
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .logo-item:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-25% - 0.75rem));
+    }
+  }
+
+  /* Pause animation on hover */
+  .logo-carousel:hover .logo-track {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 768px) {
+    .logo-item {
+      width: 100px;
+      height: 60px;
+      padding: 0.75rem;
+    }
+
+    .logo-track {
+      gap: 2rem;
+    }
+  }
+</style>

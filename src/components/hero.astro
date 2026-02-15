@@ -1,243 +1,397 @@
 ---
+import LogoCarousel from './LogoCarousel.astro';
 ---
 
-<main>
+<main class="overflow-y-hidden">
   <section class="min-h-screen flex justify-center items-center hero-section">
     
-    <!-- Hojas cayendo -->
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-1">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-2">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-3">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-4">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-5">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-6">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-7">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-8">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-9">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-10">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-11">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-12">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-13">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-14">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-15">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-16">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-17">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-18">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-19">
-    <img src="/img/hoja.png" alt="" class="falling-leaf leaf-fall-20">
 
-    <div class="flex justify-center flex-col items-center">
+    <div class="flex justify-center flex-col items-center w-full">
 
-        <h1
-            class="text-6xl md:text-8xl font-extrabold text-center 
-                bg-[url('/img/hojas1.png')] 
-                bg-cover bg-center 
-                bg-clip-text text-transparent">
-                Mac Chirinos Hinostroza
-        </h1>
+      <div class="pt-30 flex flex-col justify-center items-center">
+          <h1
+              class="text-6xl md:text-8xl font-extrabold text-center 
+                  bg-[url('/img/hojas1.png')] 
+                  bg-cover bg-center 
+                  bg-clip-text text-transparent">
+                  Mac Chirinos Hinostroza
+          </h1>
 
-        <p class="text-2xl md:text-3xl font-semibold text-center mt-4 text-gray-700">
-            Asesor técnico regulatorio
-        </p>
+          <p class="text-2xl md:text-3xl font-semibold text-center mt-4 text-gray-700 underline decoration-green-200">
+              Asesor técnico regulatorio
+          </p>
 
-        <div class="flex gap-4 mt-8">
-            <a href="#contacto" class="btn btn-primary">
-                Contáctame
-            </a>
-            <a href="/cv.pdf" download class="btn btn-secondary">
-                Descargar CV
-            </a>
+          <div class="flex gap-4 mt-8">
+              <a href="#contacto" class="btn btn-primary">
+                  Contáctame
+              </a>
+              <a href="/cv.pdf" download class="btn btn-secondary">
+                  Descargar CV
+              </a>
+          </div>
+
         </div>
+
+          <LogoCarousel />
 
         <i class="fa-solid fa-arrow-down text text-5xl mt-16 md:mt-20 bounce-arrow"></i>
     </div>
   </section>
 
-</main>
+  <section class="mt-10">
+
+    <div class="flex flex-none gap-40 justify-center items-center">
+      <div class="">
+        <h2 class="text text-4xl font-semibold">Acerca de mí</h2>
+
+        <div class="mt-5">
+          <p class="text text-gray-600 text-2xl"><span class="text text-green-800 font-semibold">Ingeniero Agrónomo</span> especializado en regulación peruana SENASA <br> y estándares orgánicos internacionales EU, NOP, JAS, RTPO para <br> plaguicidas e insumos agrícolas.</p><br>
+          <p class="text text-gray-600 text-2xl">Acompaño a empresas importadoras, formuladores y comercializadores en el <br> cumplimiento normativo ante SENASA y en la evaluación de compatibilidad con <br> estándares orgánicos internacionales (UE, NOP, JAS), ayudándolos a evitar <br> observaciones, rechazos y riesgos regulatorios.</p>
+          
+          <div class="bg-gradient-to-r from-green-900 to-green-600 rounded-lg p-4 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all mt-8 inline-block">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
+              <span class="font-semibold text-lg">Educación</span>
+            </div>
+            <div class="pl-1">
+              <p class="font-semibold text-base">Ingeniería Agrónoma</p>
+              <p class="text-sm opacity-95">Universidad Nacional Agraria La Molina</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src="/img/mac1.jpeg" alt="" class="h-100 rounded-2xl">
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="mt-30 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col ml-55">
+      <h2 class="text-4xl font-semibold mb-12">Mis Servicios</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        {/* Servicio 1 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-flask text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Ensayos de Eficacia en Campo</h3>
+              <p class="text-gray-600">Ensayos de eficacia en campo de plaguicidas de uso agrícola con estándares internacionales.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 2 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-certificate text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Autorización Sanitaria</h3>
+              <p class="text-gray-600">Autorización sanitaria de establecimientos para procesamiento primario de alimentos agropecuarios y piensos.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 3 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-cow text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Autorizaciones Pecuarias</h3>
+              <p class="text-gray-600">Autorizaciones de camales y granjas pecuarias con cumplimiento regulatorio.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 4 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-leaf text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Saneamiento Ambiental</h3>
+              <p class="text-gray-600">Servicio integral de saneamiento ambiental para sus operaciones agrícolas.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 5 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-spray-can text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Fumigaciones Agrícolas</h3>
+              <p class="text-gray-600">Fumigaciones de silos, buques, depósitos y almacenes con técnicas avanzadas.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Servicio 6 */}
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-biohazard text-2xl text-green-600 mt-1"></i>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">Tratamiento Cuarentenario</h3>
+              <p class="text-gray-600">Servicio de tratamiento cuarentenario de productos pecuarios siguiendo protocolos internacionales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-30 px-4 py-16">
+    <div class="max-w-6xl mx-auto ml-55">
+      <div class="flex gap-16">
+        {/* Experiencia */}
+        <div class="flex-1">
+          <h2 class="text-4xl font-semibold mb-12">Experiencia</h2>
+          
+          <div class="relative">
+            {/* Timeline vertical line */}
+            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-600 to-gray-300"></div>
+            
+            {/* Experience Item 1 */}
+            <div class="mb-12 pl-20">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+                <i class="fa-solid fa-briefcase text-lg"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-800">Asesor técnico regulatorio (freelance)</h3>
+              <p class="text-sm text-gray-500 mt-1">NEXXT TECNOLOGIA Y COMERCIO E.I.R.L</p>
+              <p class="text-sm text-gray-500">Noviembre 2025 - Actualidad</p>
+              
+              <ul class="mt-4 space-y-2 text-gray-700">
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Proporciono asesoría técnica para la obtención de autorización sanitaria.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Gestiono la documentación técnica para obtener los permisos de experimentación de plaguicidas.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Gestiono la documentación técnica para obtener los permisos de comercialización.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Experience Item 2 */}
+            <div class="mb-12 pl-20">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+                <i class="fa-solid fa-leaf text-lg"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-800">Asesor de insumos orgánicos (freelance)</h3>
+              <p class="text-sm text-gray-500 mt-1">NEXXT S.A.C.</p>
+              <p class="text-sm text-gray-500">Octubre 2025 - Actualidad</p>
+              
+              <ul class="mt-4 space-y-2 text-gray-700">
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Evalúo y recomiendo insumos aprobados por estándares internacionales</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Gestiono el proceso de evaluación con la certificadora</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Mantengo información actualizada sobre los marcos de regulación orgánica (EU, USDA-NOP, SENASA).</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Experience Item 3 */}
+            <div class="pl-20">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+                <i class="fa-solid fa-clipboard text-lg"></i>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-800">Asistente regulatorio (freelance)</h3>
+              <p class="text-sm text-gray-500 mt-1">CARANLU E.I.R.L</p>
+              <p class="text-sm text-gray-500">Enero 2024 - Presente</p>
+              
+              <ul class="mt-4 space-y-2 text-gray-700">
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Asisto en la preparación de documentos técnicos, dossiers de productos y solicitudes de permisos para SENASA.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Oriento a formuladores, importadores y exportadores en auditorías y certificaciones comerciales.</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-green-600 font-bold">•</span>
+                  <span>Facilito aprobaciones rápidas asegurando el cumplimiento normativo vigente.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Idiomas */}
+        <div class="flex-1">
+          <h2 class="text-4xl font-semibold mb-12">Idiomas</h2>
+          
+          <div class="space-y-12">
+            {/* English */}
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-700">
+              <h3 class="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-globe text-3xl text-green-700"></i> English
+              </h3>
+              
+              <div class="space-y-5">
+                {/* Written */}
+                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="font-bold text-gray-800 text-lg">Written</p>
+                    <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold">Advanced</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
+                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
+                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
+                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                  </div>
+                </div>
+                
+                {/* Spoken */}
+                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="font-bold text-gray-800 text-lg">Spoken</p>
+                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Intermediate</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
+                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
+                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Portugués */}
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-600">
+              <h3 class="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-globe text-3xl text-green-600"></i> Portugués
+              </h3>
+              
+              <div class="space-y-5">
+                {/* Oral */}
+                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="font-bold text-gray-800 text-lg">Oral</p>
+                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Básico</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                  </div>
+                </div>
+                
+                {/* Escrita */}
+                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
+                  <div class="flex justify-between items-center mb-3">
+                    <p class="font-bold text-gray-800 text-lg">Escrita</p>
+                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Básico</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  {/* Contact Section */}
+  <section id="contacto" class="mt-30 px-4 py-16 bg-gradient-to-b from-white to-green-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">Ponte en Contacto</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Phone */}
+        <a href="tel:+51932574949" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-phone text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500 font-semibold">Teléfono</p>
+            <p class="text-xl font-bold text-gray-800">+51 932 574 949</p>
+            <p class="text-sm text-gray-600 mt-1">Llamadas y WhatsApp</p>
+          </div>
+        </a>
+
+        {/* Email */}
+        <a href="mailto:mac.chirinosh@cipima.org.pe" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-envelope text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500 font-semibold">Email</p>
+            <p class="text-lg font-bold text-gray-800">mac.chirinosh@cipima.org.pe</p>
+            <p class="text-sm text-gray-600 mt-1">Responde en 24 horas</p>
+          </div>
+        </a>
+
+        {/* Location */}
+        <a href="https://maps.google.com/?q=Calle+Molinero+27+La+Molina" target="_blank" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-location-dot text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500 font-semibold">Ubicación</p>
+            <p class="text-lg font-bold text-gray-800">Calle Molinero 27</p>
+            <p class="text-sm text-gray-600">La Molina, Lima - Perú</p>
+          </div>
+        </a>
+
+        {/* LinkedIn */}
+        <a href="https://www.linkedin.com/in/machirinos-regulacion/" target="_blank" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-linkedin text-2xl"></i>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500 font-semibold">LinkedIn</p>
+            <p class="text-lg font-bold text-gray-800">machirinos-regulacion</p>
+            <p class="text-sm text-gray-600">Conéctate conmigo</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
 <style>
+  main {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   .hero-section {
     position: relative;
     overflow: hidden;
   }
 
-  .falling-leaf {
-    position: absolute;
-    width: 50px;
-    height: auto;
-    opacity: 0.6;
-    z-index: 1;
-    pointer-events: none;
-    animation: fall linear infinite;
-  }
-
-  @keyframes fall {
-    0% {
-      top: -100px;
-      transform: rotate(0deg);
-    }
-    100% {
-      top: 100vh;
-      transform: rotate(360deg);
-    }
-  }
-
-  .leaf-fall-1 {
-    left: 10%;
-    animation-duration: 8s;
-    animation-delay: 0s;
-    top: -150px;
-  }
-
-  .leaf-fall-2 {
-    left: 25%;
-    animation-duration: 10s;
-    animation-delay: 2s;
-    width: 40px;
-    top: -300px;
-  }
-
-  .leaf-fall-3 {
-    left: 40%;
-    animation-duration: 12s;
-    animation-delay: 4s;
-    top: -200px;
-  }
-
-  .leaf-fall-4 {
-    left: 55%;
-    animation-duration: 9s;
-    animation-delay: 1s;
-    width: 45px;
-    top: -400px;
-  }
-
-  .leaf-fall-5 {
-    left: 70%;
-    animation-duration: 11s;
-    animation-delay: 3s;
-    top: -250px;
-  }
-
-  .leaf-fall-6 {
-    left: 85%;
-    animation-duration: 10s;
-    animation-delay: 5s;
-    width: 55px;
-    top: -350px;
-  }
-
-  .leaf-fall-7 {
-    left: 15%;
-    animation-duration: 13s;
-    animation-delay: 6s;
-    width: 42px;
-    top: -500px;
-  }
-
-  .leaf-fall-8 {
-    left: 65%;
-    animation-duration: 9.5s;
-    animation-delay: 2.5s;
-    width: 48px;
-    top: -180px;
-  }
-
-  .leaf-fall-9 {
-    left: 5%;
-    animation-duration: 11s;
-    animation-delay: 1.5s;
-    width: 52px;
-    top: -280px;
-  }
-
-  .leaf-fall-10 {
-    left: 20%;
-    animation-duration: 14s;
-    animation-delay: 7s;
-    width: 38px;
-    top: -600px;
-  }
-
-  .leaf-fall-11 {
-    left: 35%;
-    animation-duration: 10.5s;
-    animation-delay: 3.5s;
-    width: 46px;
-    top: -320px;
-  }
-
-  .leaf-fall-12 {
-    left: 50%;
-    animation-duration: 12.5s;
-    animation-delay: 0.5s;
-    width: 44px;
-    top: -450px;
-  }
-
-  .leaf-fall-13 {
-    left: 60%;
-    animation-duration: 9s;
-    animation-delay: 4.5s;
-    width: 50px;
-    top: -220px;
-  }
-
-  .leaf-fall-14 {
-    left: 75%;
-    animation-duration: 13.5s;
-    animation-delay: 2s;
-    width: 43px;
-    top: -380px;
-  }
-
-  .leaf-fall-15 {
-    left: 90%;
-    animation-duration: 8.5s;
-    animation-delay: 5.5s;
-    width: 49px;
-    top: -160px;
-  }
-
-  .leaf-fall-16 {
-    left: 12%;
-    animation-duration: 11.5s;
-    animation-delay: 6.5s;
-    width: 41px;
-    top: -550px;
-  }
-
-  .leaf-fall-17 {
-    left: 30%;
-    animation-duration: 10s;
-    animation-delay: 1s;
-    width: 47px;
-    top: -270px;
-  }
-
-  .leaf-fall-18 {
-    left: 45%;
-    animation-duration: 13s;
-    animation-delay: 3s;
-    width: 39px;
-    top: -420px;
-  }
-
-  .leaf-fall-19 {
-    left: 58%;
-    animation-duration: 9.8s;
-    animation-delay: 4s;
-    width: 51px;
-    top: -190px;
-  }
-
-  .leaf-fall-20 {
-    left: 80%;
-    animation-duration: 12s;
-    animation-delay: 0.8s;
-    width: 45px;
-    top: -330px;
-  }
+  
 
   .hero-section > div {
     position: relative;
