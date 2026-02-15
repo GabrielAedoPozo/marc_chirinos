@@ -9,6 +9,9 @@ import LogoCarousel from './LogoCarousel.astro';
     <div class="flex justify-center flex-col items-center w-full">
 
       <div class="pt-30 flex flex-col justify-center items-center">
+          <p class="mb-10 text text-2xl font-semibold uppercase tracking-[0.35em] text-center bg-gradient-to-r from-green-900 via-green-600 to-green-900 bg-clip-text text-transparent">
+            Asesor técnico regulatorio
+          </p>
           <h1
               class="text-6xl md:text-8xl font-extrabold text-center 
                   bg-[url('/marc_chirinos/img/hojas1.png')] 
@@ -17,9 +20,6 @@ import LogoCarousel from './LogoCarousel.astro';
                   Mac Chirinos Hinostroza
           </h1>
 
-          <p class="text-2xl md:text-3xl font-semibold text-center mt-4 text-gray-700 underline decoration-green-200">
-              Asesor técnico regulatorio
-          </p>
 
           <div class="flex gap-4 mt-8">
               <a href="#contacto" class="btn btn-primary">
@@ -38,7 +38,7 @@ import LogoCarousel from './LogoCarousel.astro';
     </div>
   </section>
 
-  <section class="mt-10">
+  <section class="mt-10 about-section">
 
     <div class="flex flex-none gap-40 justify-center items-center">
       <div class="">
@@ -46,16 +46,23 @@ import LogoCarousel from './LogoCarousel.astro';
 
         <div class="mt-5">
           <p class="text text-gray-600 text-2xl"><span class="text text-green-800 font-semibold">Ingeniero Agrónomo</span> especializado en regulación peruana SENASA <br> y estándares orgánicos internacionales EU, NOP, JAS, RTPO para <br> plaguicidas e insumos agrícolas.</p><br>
-          <p class="text text-gray-600 text-2xl">Acompaño a empresas importadoras, formuladores y comercializadores en el <br> cumplimiento normativo ante SENASA y en la evaluación de compatibilidad con <br> estándares orgánicos internacionales (UE, NOP, JAS), ayudándolos a evitar <br> observaciones, rechazos y riesgos regulatorios.</p>
+          <p class="text text-gray-600 text-2xl">Acompaño a empresas importadoras, formuladores y comercializadores en el <br> cumplimiento normativo ante SENASA y en la evaluación de compatibilidad con <br> estándares orgánicos internacionales (UE, NOP, JAS), ayudándolos a evitar <br> observaciones, rechazos y riesgos regulatorios.</p> <br>
           
-          <div class="bg-gradient-to-r from-green-900 to-green-600 rounded-lg p-4 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all mt-8 inline-block">
-            <div class="flex items-center gap-2 mb-2">
-              <i class="fa-solid fa-graduation-cap text-xl"></i>
-              <span class="font-semibold text-lg">Educación</span>
+          <div class="mt-8 flex flex-col sm:flex-row gap-6 items-start">
+            <div class="bg-gradient-to-r from-green-900 to-green-600 rounded-lg p-4 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-block">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-graduation-cap text-xl"></i>
+                <span class="font-semibold text-lg">Educación</span>
+              </div>
+              <div class="pl-1">
+                <p class="font-semibold text-base">Ingeniería Agrónoma</p>
+                <p class="text-sm opacity-95">Universidad Nacional Agraria La Molina</p>
+              </div>
             </div>
-            <div class="pl-1">
-              <p class="font-semibold text-base">Ingeniería Agrónoma</p>
-              <p class="text-sm opacity-95">Universidad Nacional Agraria La Molina</p>
+            <div class="bg-white border-l-4 border-green-600 rounded-lg p-4 shadow-md">
+              <p class="text text-green-700 text-lg font-semibold">Idiomas</p>
+              <p class="text text-gray-700 text-base mt-2">Ingles: Intermedio - Avanzado</p>
+              <p class="text text-gray-700 text-base">Portugués: Básico</p>
             </div>
           </div>
         </div>
@@ -69,8 +76,8 @@ import LogoCarousel from './LogoCarousel.astro';
   </section>
 
   <section class="mt-30 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col ml-55">
-      <h2 class="text-4xl font-semibold mb-12">Mis Servicios</h2>
+    <div class="max-w-6xl mx-auto flex flex-col lg:ml-55">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left">Mis Servicios</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {/* Servicio 1 */}
@@ -142,20 +149,20 @@ import LogoCarousel from './LogoCarousel.astro';
     </div>
   </section>
 
-  <section class="mt-30 px-4 py-16">
-    <div class="max-w-6xl mx-auto ml-55">
-      <div class="flex gap-16">
+  <section class="mt-30 px-4 py-16 exp-lang-section">
+    <div class="max-w-screen-2xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-14 justify-center items-start">
         {/* Experiencia */}
-        <div class="flex-1">
-          <h2 class="text-4xl font-semibold mb-12">Experiencia</h2>
+        <div class="flex-1 lg:flex-[1.35]">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left">Experiencia</h2>
           
-          <div class="relative">
+          <div class="relative experience-timeline">
             {/* Timeline vertical line */}
-            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-600 to-gray-300"></div>
+            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-600 to-gray-300 timeline-line"></div>
             
             {/* Experience Item 1 */}
-            <div class="mb-12 pl-20">
-              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+            <div class="mb-12 pl-0 sm:pl-20 timeline-item">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white timeline-marker">
                 <i class="fa-solid fa-briefcase text-lg"></i>
               </div>
               
@@ -180,8 +187,8 @@ import LogoCarousel from './LogoCarousel.astro';
             </div>
 
             {/* Experience Item 2 */}
-            <div class="mb-12 pl-20">
-              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+            <div class="mb-12 pl-0 sm:pl-20 timeline-item">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white timeline-marker">
                 <i class="fa-solid fa-leaf text-lg"></i>
               </div>
               
@@ -206,8 +213,8 @@ import LogoCarousel from './LogoCarousel.astro';
             </div>
 
             {/* Experience Item 3 */}
-            <div class="pl-20">
-              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white">
+            <div class="pl-0 sm:pl-20 timeline-item">
+              <div class="absolute left-0 w-14 h-14 bg-green-600 rounded-full border-4 border-white flex items-center justify-center text-white timeline-marker">
                 <i class="fa-solid fa-clipboard text-lg"></i>
               </div>
               
@@ -233,152 +240,23 @@ import LogoCarousel from './LogoCarousel.astro';
           </div>
         </div>
 
-        {/* Idiomas */}
-        <div class="flex-1">
-          <h2 class="text-4xl font-semibold mb-12">Idiomas</h2>
-          
-          <div class="space-y-12">
-            {/* English */}
-            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-700">
-              <h3 class="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                <i class="fa-solid fa-globe text-3xl text-green-700"></i> English
-              </h3>
-              
-              <div class="space-y-5">
-                {/* Written */}
-                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
-                  <div class="flex justify-between items-center mb-3">
-                    <p class="font-bold text-gray-800 text-lg">Written</p>
-                    <span class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold">Advanced</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
-                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
-                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
-                    <span class="w-5 h-5 bg-green-700 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                  </div>
-                </div>
-                
-                {/* Spoken */}
-                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
-                  <div class="flex justify-between items-center mb-3">
-                    <p class="font-bold text-gray-800 text-lg">Spoken</p>
-                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Intermediate</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
-                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
-                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Portugués */}
-            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-green-600">
-              <h3 class="text-2xl font-bold text-green-900 mb-6 flex items-center gap-3">
-                <i class="fa-solid fa-globe text-3xl text-green-600"></i> Portugués
-              </h3>
-              
-              <div class="space-y-5">
-                {/* Oral */}
-                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
-                  <div class="flex justify-between items-center mb-3">
-                    <p class="font-bold text-gray-800 text-lg">Oral</p>
-                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Básico</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                  </div>
-                </div>
-                
-                {/* Escrita */}
-                <div class="bg-white rounded-lg p-5 shadow-md border-b-2 border-green-500">
-                  <div class="flex justify-between items-center mb-3">
-                    <p class="font-bold text-gray-800 text-lg">Escrita</p>
-                    <span class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Básico</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <span class="w-5 h-5 bg-green-600 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                    <span class="w-5 h-5 bg-gray-300 rounded-full"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="flex-1 lg:flex-[0.9] experience-images">
+          <div class="exp-image-stack">
+            <img src="/marc_chirinos/img/mac3.jpeg" alt="" class="exp-image" />
+            <img src="/marc_chirinos/img/agr.jpg" alt="" class="exp-image" />
+            <img src="/marc_chirinos/img/agr2.jpg" alt="" class="exp-image" />
           </div>
         </div>
+        
+
       </div>
 
 
     </div>
   </section>
 
-  {/* Contact Section */}
-  <section id="contacto" class="mt-30 px-4 py-16 bg-gradient-to-b from-white to-green-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">Ponte en Contacto</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* Phone */}
-        <a href="tel:+51932574949" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
-          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-phone text-2xl"></i>
-          </div>
-          <div>
-            <p class="text-sm text-gray-500 font-semibold">Teléfono</p>
-            <p class="text-xl font-bold text-gray-800">+51 932 574 949</p>
-            <p class="text-sm text-gray-600 mt-1">Llamadas y WhatsApp</p>
-          </div>
-        </a>
 
-        {/* Email */}
-        <a href="mailto:mac.chirinosh@cipima.org.pe" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
-          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-envelope text-2xl"></i>
-          </div>
-          <div>
-            <p class="text-sm text-gray-500 font-semibold">Email</p>
-            <p class="text-lg font-bold text-gray-800">mac.chirinosh@cipima.org.pe</p>
-            <p class="text-sm text-gray-600 mt-1">Responde en 24 horas</p>
-          </div>
-        </a>
 
-        {/* Location */}
-        <a href="https://maps.google.com/?q=Calle+Molinero+27+La+Molina" target="_blank" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
-          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-location-dot text-2xl"></i>
-          </div>
-          <div>
-            <p class="text-sm text-gray-500 font-semibold">Ubicación</p>
-            <p class="text-lg font-bold text-gray-800">Calle Molinero 27</p>
-            <p class="text-sm text-gray-600">La Molina, Lima - Perú</p>
-          </div>
-        </a>
-
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com/in/machirinos-regulacion/" target="_blank" class="group flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-green-600">
-          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-            <i class="fa-brands fa-linkedin text-2xl"></i>
-          </div>
-          <div>
-            <p class="text-sm text-gray-500 font-semibold">LinkedIn</p>
-            <p class="text-lg font-bold text-gray-800">machirinos-regulacion</p>
-            <p class="text-sm text-gray-600">Conéctate conmigo</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
 <style>
   main {
@@ -389,6 +267,15 @@ import LogoCarousel from './LogoCarousel.astro';
   .hero-section {
     position: relative;
     overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('/marc_chirinos/img/hojas3.avif') center/cover no-repeat;
+    opacity: 0.05;
+    z-index: 1;
   }
 
   
@@ -442,6 +329,199 @@ import LogoCarousel from './LogoCarousel.astro';
     }
     50% {
       transform: translateY(15px);
+    }
+  }
+
+  .skills-section {
+    margin-top: 3.5rem;
+    padding: 4.5rem 1.5rem;
+    background: #ffffff;
+  }
+
+  .experience-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .exp-image-stack {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .exp-image {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 18px 35px rgba(10, 98, 35, 0.12);
+    border: 1px solid rgba(12, 107, 43, 0.12);
+    object-fit: cover;
+  }
+
+  .skills-shell {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .skills-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .skills-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .skills-subtitle {
+    color: #1f5c32;
+    font-size: 1.05rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(5, minmax(200px, 1fr));
+    }
+  }
+
+  .skill-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 0 18px 35px rgba(10, 98, 35, 0.12);
+    border: 1px solid rgba(12, 107, 43, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(15, 155, 15, 0.12), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .skill-card:hover::after {
+    opacity: 1;
+  }
+
+  .skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #0f9b0f;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .skill-card p {
+    margin: 0;
+    color: #1f2937;
+    line-height: 1.5;
+  }
+</style>
+
+<style>
+  @media (max-width: 1024px) {
+    .about-section .flex {
+      flex-direction: column;
+      gap: 2.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .about-section .flex > div {
+      width: 100%;
+    }
+
+    .about-section h2 {
+      text-align: center;
+    }
+
+    .about-section .mt-5 {
+      text-align: center;
+    }
+
+    .about-section img {
+      width: 100%;
+      max-width: 28rem;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .exp-lang-section {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .exp-lang-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .exp-lang-section .experience-timeline {
+      padding-left: 0;
+    }
+
+    .exp-lang-section .timeline-line {
+      display: none;
+    }
+
+    .exp-lang-section .timeline-marker {
+      position: static;
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-lang-section .timeline-item {
+      padding-left: 0;
+    }
+
+    .exp-lang-section .timeline-item h3,
+    .exp-lang-section .timeline-item p,
+    .exp-lang-section .timeline-item ul {
+      text-align: left;
+    }
+
+    .exp-lang-section .timeline-item ul {
+      padding-left: 0.25rem;
+    }
+
+    .exp-lang-section .space-y-12 {
+      gap: 1.5rem;
+    }
+
+    .exp-lang-section .bg-gradient-to-br {
+      padding: 1.5rem;
+    }
+
+    .exp-lang-section .bg-white.rounded-lg {
+      padding: 1rem;
+    }
+
+    .exp-lang-section .text-2xl {
+      font-size: 1.25rem;
     }
   }
 </style>
