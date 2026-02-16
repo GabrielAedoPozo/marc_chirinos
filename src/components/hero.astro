@@ -81,73 +81,78 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     
   </section>
 
-  <section class="mt-30 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col lg:ml-55">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left fade-in-up">Mis Servicios</h2>
+  <section class="mt-30 px-4 py-16 services-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 fade-in-up">
+        <span class="services-gradient-text">Mis Servicios</span>
+      </h2>
+      <p class="text-center text-gray-600 text-lg mb-12">Selecciona un servicio para conocer más detalles</p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        {/* Servicio 1 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.1s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-flask text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Ensayos de Eficacia en Campo</h3>
-              <p class="text-gray-600">Ensayos de eficacia en campo de plaguicidas de uso agrícola con estándares internacionales.</p>
+      <div class="services-container">
+        {/* Rueda de servicios */}
+        <div class="services-wheel-wrapper">
+          <div class="services-wheel" id="servicesWheel">
+            {/* Centro de la rueda */}
+            <div class="wheel-center">
+              <div class="wheel-center-glow"></div>
+              <i class="fa-solid fa-briefcase text-3xl text-white"></i>
             </div>
+
+            {/* Servicio 1 - Ensayos de Eficacia */}
+            <div class="service-wheel-item" data-service="0" style="--angle: 0deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-flask"></i>
+              </div>
+            </div>
+
+            {/* Servicio 2 - Autorización Sanitaria */}
+            <div class="service-wheel-item" data-service="1" style="--angle: 60deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+            </div>
+
+            {/* Servicio 3 - Autorizaciones Pecuarias */}
+            <div class="service-wheel-item" data-service="2" style="--angle: 120deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-cow"></i>
+              </div>
+            </div>
+
+            {/* Servicio 4 - Saneamiento Ambiental */}
+            <div class="service-wheel-item" data-service="3" style="--angle: 180deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+            </div>
+
+            {/* Servicio 5 - Fumigaciones */}
+            <div class="service-wheel-item" data-service="4" style="--angle: 240deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-spray-can"></i>
+              </div>
+            </div>
+
+            {/* Servicio 6 - Tratamiento Cuarentenario */}
+            <div class="service-wheel-item" data-service="5" style="--angle: 300deg;">
+              <div class="service-icon-wrapper">
+                <i class="fa-solid fa-biohazard"></i>
+              </div>
+            </div>
+
+            {/* Círculos decorativos */}
+            <div class="wheel-circle wheel-circle-1"></div>
+            <div class="wheel-circle wheel-circle-2"></div>
           </div>
         </div>
 
-        {/* Servicio 2 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.2s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-certificate text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Autorización Sanitaria</h3>
-              <p class="text-gray-600">Autorización sanitaria de establecimientos para procesamiento primario de alimentos agropecuarios y piensos.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Servicio 3 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.3s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-cow text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Autorizaciones Pecuarias</h3>
-              <p class="text-gray-600">Autorizaciones de camales y granjas pecuarias con cumplimiento regulatorio.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Servicio 4 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.4s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-leaf text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Saneamiento Ambiental</h3>
-              <p class="text-gray-600">Servicio integral de saneamiento ambiental para sus operaciones agrícolas.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Servicio 5 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.5s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-spray-can text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Fumigaciones Agrícolas</h3>
-              <p class="text-gray-600">Fumigaciones de silos, buques, depósitos y almacenes con técnicas avanzadas.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Servicio 6 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.6s;">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-biohazard text-2xl text-green-600 mt-1"></i>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Tratamiento Cuarentenario</h3>
-              <p class="text-gray-600">Servicio de tratamiento cuarentenario de productos pecuarios siguiendo protocolos internacionales.</p>
+        {/* Panel de información del servicio */}
+        <div class="service-info-panel" id="serviceInfoPanel">
+          <div class="service-info-content" id="serviceInfoContent">
+            <div class="service-welcome">
+              <i class="fa-solid fa-hand-pointer text-6xl text-green-600 mb-4"></i>
+              <h3 class="text-3xl font-bold text-gray-800 mb-3">Selecciona un Servicio</h3>
+              <p class="text-gray-600 text-xl">Haz clic en cualquier ícono de la rueda para ver más información</p>
             </div>
           </div>
         </div>
@@ -261,20 +266,101 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     </div>
   </section>
 
-  <section class="mt-30">
-    <div class="pl-55">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left">Habilidades</h2>
-      <div>
-        <div>
-          <p class="text text-2xl">Cumplimiento de estándares orgánicos (EU 2021/1165, USDA 7 CFR Part 205, JAS 1605, DS 044-2006)</p>
+  <section class="mt-30 px-4 py-16 skills-modern-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 fade-in-up">
+        <span class="skills-gradient-text">Habilidades</span>
+      </h2>
+      <p class="text-center text-gray-600 text-lg mb-12">Experiencia especializada y competencias clave</p>
+      
+      <div class="skills-modern-grid">
+        {/* Habilidad 1 */}
+        <div class="skill-modern-card fade-in-up" style="animation-delay: 0.1s;">
+          <div class="skill-image-overlay">
+            <img src="/marc_chirinos/img/habilidades1.avif" alt="Cumplimiento de estándares orgánicos" />
+            <div class="skill-overlay-gradient"></div>
+          </div>
+          <div class="skill-modern-content">
+            <div class="skill-modern-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h3 class="skill-modern-title">Cumplimiento de estándares orgánicos</h3>
+            <p class="skill-modern-tags">
+              <span class="skill-tag">EU 2021/1165</span>
+              <span class="skill-tag">USDA 7 CFR Part 205</span>
+              <span class="skill-tag">JAS 1605</span>
+              <span class="skill-tag">DS 044-2006</span>
+            </p>
+          </div>
         </div>
 
-        <div>
-          <p class="text text-2xl">Asesoramiento en registro de plaguicidas (DS 001-2015, Resolution 2075)</p>
+        {/* Habilidad 2 */}
+        <div class="skill-modern-card fade-in-up" style="animation-delay: 0.2s;">
+          <div class="skill-image-overlay">
+            <img src="/marc_chirinos/img/habilidades2.webp" alt="Asesoramiento en registro de plaguicidas" />
+            <div class="skill-overlay-gradient"></div>
+          </div>
+          <div class="skill-modern-content">
+            <div class="skill-modern-icon">
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            <h3 class="skill-modern-title">Asesoramiento en registro de plaguicidas</h3>
+            <p class="skill-modern-tags">
+              <span class="skill-tag">DS 001-2015</span>
+              <span class="skill-tag">Resolution 2075</span>
+            </p>
+          </div>
         </div>
 
-        <div>
-          <p class="text text-2xl">Office 365 Competencia intermedia)</p>
+        {/* Habilidad 3 */}
+        <div class="skill-modern-card fade-in-up" style="animation-delay: 0.3s;">
+          <div class="skill-image-overlay">
+            <img src="/marc_chirinos/img/habilidades3.png" alt="Office 365" />
+            <div class="skill-overlay-gradient"></div>
+          </div>
+          <div class="skill-modern-content">
+            <div class="skill-modern-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="skill-modern-title">Office 365</h3>
+            <p class="skill-modern-tags">
+              <span class="skill-tag">Competencia intermedia</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Habilidad 4 */}
+        <div class="skill-modern-card fade-in-up" style="animation-delay: 0.4s;">
+          <div class="skill-image-overlay">
+            <img src="/marc_chirinos/img/habilidades4.avif" alt="Servicio al cliente" />
+            <div class="skill-overlay-gradient"></div>
+          </div>
+          <div class="skill-modern-content">
+            <div class="skill-modern-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3 class="skill-modern-title">Servicio al cliente y entrega de reportes</h3>
+            <p class="skill-modern-tags">
+              <span class="skill-tag">Gestión profesional</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Habilidad 5 */}
+        <div class="skill-modern-card fade-in-up" style="animation-delay: 0.5s;">
+          <div class="skill-image-overlay">
+            <img src="/marc_chirinos/img/habilidades5.jpg" alt="Escritura técnica" />
+            <div class="skill-overlay-gradient"></div>
+          </div>
+          <div class="skill-modern-content">
+            <div class="skill-modern-icon">
+              <i class="fa-solid fa-file-pen"></i>
+            </div>
+            <h3 class="skill-modern-title">Escritura técnica y sistemas de trazabilidad</h3>
+            <p class="skill-modern-tags">
+              <span class="skill-tag">Documentación precisa</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -531,6 +617,617 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     color: #1f2937;
     line-height: 1.5;
   }
+
+  /* Modern Skills Section */
+  .skills-modern-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  }
+
+  .skills-gradient-text {
+    background: linear-gradient(135deg, #064e06, #0f9b0f, #15803d);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .skills-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .skill-modern-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    height: 420px;
+  }
+
+  .skill-modern-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(15, 155, 15, 0.2);
+  }
+
+  .skill-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .skill-image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.85);
+  }
+
+  .skill-modern-card:hover .skill-image-overlay img {
+    transform: scale(1.15);
+    filter: brightness(0.7);
+  }
+
+  .skill-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.3) 40%,
+      rgba(6, 78, 6, 0.75) 100%
+    );
+    transition: background 0.5s ease;
+  }
+
+  .skill-modern-card:hover .skill-overlay-gradient {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 30%,
+      rgba(6, 78, 6, 0.9) 100%
+    );
+  }
+
+  .skill-modern-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .skill-modern-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #0f9b0f;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .skill-modern-card:hover .skill-modern-icon {
+    transform: translateY(-8px) rotate(360deg) scale(1.1);
+    background: linear-gradient(135deg, #0f9b0f, #064e06);
+    color: white;
+    box-shadow: 0 12px 32px rgba(15, 155, 15, 0.4);
+  }
+
+  .skill-modern-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    line-height: 1.3;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+    transition: all 0.4s ease;
+  }
+
+  .skill-modern-card:hover .skill-modern-title {
+    transform: translateY(-5px);
+    text-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .skill-modern-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    opacity: 0.95;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+  }
+
+  .skill-modern-card:hover .skill-modern-tags {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .skill-modern-card:hover .skill-tag {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .skills-modern-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .skill-modern-card {
+      height: 380px;
+    }
+
+    .skill-modern-content {
+      padding: 1.5rem;
+    }
+
+    .skill-modern-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 1.75rem;
+    }
+
+    .skill-modern-title {
+      font-size: 1.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .skills-modern-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-modern-card:nth-child(1),
+    .skill-modern-card:nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+  .services-section {
+    position: relative;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  }
+
+  .services-gradient-text {
+    background: linear-gradient(135deg, #064e06, #0f9b0f, #15803d);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  .services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .services-wheel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .services-wheel {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    animation: wheelRotate 40s linear infinite;
+  }
+
+  .services-wheel:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes wheelRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .wheel-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #064e06, #0f9b0f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(15, 155, 15, 0.4);
+    z-index: 10;
+    animation: centerPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes centerPulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow: 0 10px 40px rgba(15, 155, 15, 0.4);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.05);
+      box-shadow: 0 15px 50px rgba(15, 155, 15, 0.6);
+    }
+  }
+
+  .wheel-center-glow {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(15, 155, 15, 0.3), transparent 70%);
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+
+  .wheel-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(15, 155, 15, 0.2);
+  }
+
+  .wheel-circle-1 {
+    width: 300px;
+    height: 300px;
+    animation: circleFloat 4s ease-in-out infinite;
+  }
+
+  .wheel-circle-2 {
+    width: 400px;
+    height: 400px;
+    animation: circleFloat 6s ease-in-out infinite reverse;
+  }
+
+  @keyframes circleFloat {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+
+  .service-wheel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    margin-left: -45px;
+    margin-top: -45px;
+    transform-origin: center;
+    animation: counterRotate 40s linear infinite;
+  }
+
+  @keyframes counterRotate {
+    from {
+      transform: rotate(var(--angle)) translateY(-190px) rotate(calc(-1 * var(--angle)));
+    }
+    to {
+      transform: rotate(calc(var(--angle) + 360deg)) translateY(-190px) rotate(calc(-1 * (var(--angle) + 360deg)));
+    }
+  }
+
+  .services-wheel:hover .service-wheel-item {
+    animation-play-state: paused;
+  }
+
+  .service-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 3px solid #0f9b0f;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 2rem;
+    color: #0f9b0f;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #064e06, #0f9b0f);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .service-icon-wrapper i {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+
+  .service-wheel-item:hover .service-icon-wrapper,
+  .service-wheel-item.active .service-icon-wrapper {
+    transform: scale(1.2);
+    box-shadow: 0 12px 32px rgba(15, 155, 15, 0.4);
+    border-color: #064e06;
+  }
+
+  .service-wheel-item:hover .service-icon-wrapper::before,
+  .service-wheel-item.active .service-icon-wrapper::before {
+    opacity: 1;
+  }
+
+  .service-wheel-item:hover .service-icon-wrapper i,
+  .service-wheel-item.active .service-icon-wrapper i {
+    color: white;
+  }
+
+  .service-info-panel {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(15, 155, 15, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-info-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #064e06, #0f9b0f, #15803d);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+  }
+
+  @keyframes gradientMove {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .service-info-content {
+    width: 100%;
+  }
+
+  .service-welcome {
+    text-align: center;
+    opacity: 1;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .service-detail {
+    opacity: 0;
+    animation: slideInRight 0.6s ease forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .service-detail-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #064e06, #0f9b0f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(15, 155, 15, 0.3);
+    animation: iconBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes iconBounce {
+    0% {
+      transform: scale(0) rotate(-180deg);
+    }
+    60% {
+      transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+  .service-detail h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .service-detail p {
+    font-size: 1.375rem;
+    color: #6b7280;
+    line-height: 1.8;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .services-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .services-wheel {
+      width: 400px;
+      height: 400px;
+    }
+
+    .service-wheel-item {
+      width: 70px;
+      height: 70px;
+      margin-left: -35px;
+      margin-top: -35px;
+    }
+
+    .service-icon-wrapper {
+      width: 70px;
+      height: 70px;
+      font-size: 1.5rem;
+    }
+
+    @keyframes counterRotate {
+      from {
+        transform: rotate(var(--angle)) translateY(-150px) rotate(calc(-1 * var(--angle)));
+      }
+      to {
+        transform: rotate(calc(var(--angle) + 360deg)) translateY(-150px) rotate(calc(-1 * (var(--angle) + 360deg)));
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-wheel {
+      width: 320px;
+      height: 320px;
+    }
+
+    .wheel-center {
+      width: 90px;
+      height: 90px;
+    }
+
+    .wheel-center i {
+      font-size: 1.5rem;
+    }
+
+    .service-wheel-item {
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+
+    .service-icon-wrapper {
+      width: 60px;
+      height: 60px;
+      font-size: 1.25rem;
+    }
+
+    @keyframes counterRotate {
+      from {
+        transform: rotate(var(--angle)) translateY(-120px) rotate(calc(-1 * var(--angle)));
+      }
+      to {
+        transform: rotate(calc(var(--angle) + 360deg)) translateY(-120px) rotate(calc(-1 * (var(--angle) + 360deg)));
+      }
+    }
+
+    .service-info-panel {
+      padding: 2rem;
+      min-height: 350px;
+    }
+
+    .service-detail h3 {
+      font-size: 1.875rem;
+    }
+
+    .service-detail p {
+      font-size: 1.25rem;
+    }
+  }
 </style>
 
 <style>
@@ -639,5 +1336,84 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     // Observar todos los elementos con animaciones
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Services Wheel Interactive System
+    const servicesData = [
+      {
+        icon: 'fa-flask',
+        title: 'Ensayos de Eficacia en Campo',
+        description: 'Ensayos de eficacia en campo de plaguicidas de uso agrícola con estándares internacionales. Garantizamos resultados precisos y confiables para el registro de productos.',
+      },
+      {
+        icon: 'fa-certificate',
+        title: 'Autorización Sanitaria',
+        description: 'Autorización sanitaria de establecimientos para procesamiento primario de alimentos agropecuarios y piensos. Cumplimiento total con las normativas SENASA vigentes.',
+      },
+      {
+        icon: 'fa-cow',
+        title: 'Autorizaciones Pecuarias',
+        description: 'Autorizaciones de camales y granjas pecuarias con cumplimiento regulatorio. Asesoría integral para obtener todos los permisos necesarios para su operación.',
+      },
+      {
+        icon: 'fa-leaf',
+        title: 'Saneamiento Ambiental',
+        description: 'Servicio integral de saneamiento ambiental para sus operaciones agrícolas. Implementación de protocolos sanitarios y control de plagas conforme a estándares internacionales.',
+      },
+      {
+        icon: 'fa-spray-can',
+        title: 'Fumigaciones Agrícolas',
+        description: 'Fumigaciones de silos, buques, depósitos y almacenes con técnicas avanzadas. Utilizamos productos autorizados y metodologías certificadas para máxima eficacia.',
+      },
+      {
+        icon: 'fa-biohazard',
+        title: 'Tratamiento Cuarentenario',
+        description: 'Servicio de tratamiento cuarentenario de productos pecuarios siguiendo protocolos internacionales. Garantizamos el cumplimiento de requisitos fitosanitarios para exportación.',
+      },
+    ];
+
+    const wheelItems = document.querySelectorAll('.service-wheel-item');
+    const infoContent = document.getElementById('serviceInfoContent');
+
+    function showServiceInfo(serviceIndex) {
+      const service = servicesData[serviceIndex];
+      
+      // Eliminar clase active de todos los items
+      wheelItems.forEach(item => item.classList.remove('active'));
+      
+      // Agregar clase active al item seleccionado
+      wheelItems[serviceIndex].classList.add('active');
+
+      // Crear el contenido del servicio
+      const serviceHTML = `
+        <div class="service-detail">
+          <div class="service-detail-icon">
+            <i class="fa-solid ${service.icon}"></i>
+          </div>
+          <h3>${service.title}</h3>
+          <p>${service.description}</p>
+        </div>
+      `;
+
+      // Animación de salida
+      infoContent.style.opacity = '0';
+      infoContent.style.transform = 'translateX(-20px)';
+
+      setTimeout(() => {
+        infoContent.innerHTML = serviceHTML;
+        infoContent.style.opacity = '1';
+        infoContent.style.transform = 'translateX(0)';
+      }, 200);
+    }
+
+    // Agregar event listeners a cada item de la rueda
+    wheelItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showServiceInfo(index);
+      });
+    });
+
+    // Estilo de transición para el contenido
+    infoContent.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
   });
 </script>
