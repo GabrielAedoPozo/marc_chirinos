@@ -1,5 +1,8 @@
 ---
 import LogoCarousel from './LogoCarousel.astro';
+const whatsappNumber = "51932574949";
+const whatsappMessage = "Hola%20Mac%20Chirinos,%20me%20gustaría%20saber%20más...";
+const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
 ---
 
 <main class="overflow-y-hidden">
@@ -9,20 +12,21 @@ import LogoCarousel from './LogoCarousel.astro';
     <div class="flex justify-center flex-col items-center w-full">
 
       <div class="pt-30 flex flex-col justify-center items-center">
-          <p class="mb-10 text text-2xl font-semibold uppercase tracking-[0.35em] text-center bg-gradient-to-r from-green-900 via-green-600 to-green-900 bg-clip-text text-transparent">
+          <p class="mb-10 text text-2xl font-semibold uppercase tracking-[0.35em] text-center bg-gradient-to-r from-green-900 via-green-600 to-green-900 bg-clip-text text-transparent fade-in-up">
             Asesor técnico regulatorio
           </p>
           <h1
               class="text-6xl md:text-8xl font-extrabold text-center 
                   bg-[url('/marc_chirinos/img/hojas1.png')] 
                   bg-cover bg-center 
-                  bg-clip-text text-transparent">
+                  bg-clip-text text-transparent fade-in-up"
+              style="animation-delay: 0.2s;">
                   Mac Chirinos Hinostroza
           </h1>
 
 
-          <div class="flex gap-4 mt-8">
-              <a href="#contacto" class="btn btn-primary">
+          <div class="flex gap-4 mt-8 fade-in-up" style="animation-delay: 0.4s;">
+              <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} class="btn btn-primary">
                   Contáctame
               </a>
               <a href="/cv.pdf" download class="btn btn-secondary">
@@ -32,16 +36,18 @@ import LogoCarousel from './LogoCarousel.astro';
 
         </div>
 
-          <LogoCarousel />
+          <div class="fade-in-up" style="animation-delay: 0.6s;">
+            <LogoCarousel />
+          </div>
 
-        <i class="fa-solid fa-arrow-down text text-5xl mt-16 md:mt-20 bounce-arrow"></i>
+        <i class="fa-solid fa-arrow-down text text-5xl mt-16 md:mt-20 bounce-arrow fade-in-up" style="animation-delay: 0.8s;"></i>
     </div>
   </section>
 
   <section class="mt-10 about-section">
 
     <div class="flex flex-none gap-40 justify-center items-center">
-      <div class="">
+      <div class="fade-in-left">
         <h2 class="text text-4xl font-semibold">Acerca de mí</h2>
 
         <div class="mt-5">
@@ -68,7 +74,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
       </div>
 
-      <div>
+      <div class="fade-in-right">
         <img src="/marc_chirinos/img/mac1.jpeg" alt="" class="h-100 rounded-2xl">
       </div>
     </div>
@@ -77,11 +83,11 @@ import LogoCarousel from './LogoCarousel.astro';
 
   <section class="mt-30 px-4">
     <div class="max-w-6xl mx-auto flex flex-col lg:ml-55">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left">Mis Servicios</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left fade-in-up">Mis Servicios</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {/* Servicio 1 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.1s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-flask text-2xl text-green-600 mt-1"></i>
             <div>
@@ -92,7 +98,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
 
         {/* Servicio 2 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.2s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-certificate text-2xl text-green-600 mt-1"></i>
             <div>
@@ -103,7 +109,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
 
         {/* Servicio 3 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.3s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-cow text-2xl text-green-600 mt-1"></i>
             <div>
@@ -114,7 +120,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
 
         {/* Servicio 4 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.4s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-leaf text-2xl text-green-600 mt-1"></i>
             <div>
@@ -125,7 +131,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
 
         {/* Servicio 5 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.5s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-spray-can text-2xl text-green-600 mt-1"></i>
             <div>
@@ -136,7 +142,7 @@ import LogoCarousel from './LogoCarousel.astro';
         </div>
 
         {/* Servicio 6 */}
-        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all">
+        <div class="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow-md hover:shadow-lg transition-all fade-in-up" style="animation-delay: 0.6s;">
           <div class="flex items-start gap-4">
             <i class="fa-solid fa-biohazard text-2xl text-green-600 mt-1"></i>
             <div>
@@ -242,9 +248,9 @@ import LogoCarousel from './LogoCarousel.astro';
 
         <div class="flex-1 lg:flex-[0.9] experience-images">
           <div class="exp-image-stack">
-            <img src="/marc_chirinos/img/mac3.jpeg" alt="" class="exp-image" />
-            <img src="/marc_chirinos/img/agr.jpg" alt="" class="exp-image" />
-            <img src="/marc_chirinos/img/agr2.jpg" alt="" class="exp-image" />
+            <img src="/marc_chirinos/img/mac3.jpeg" alt="" class="exp-image fade-in-right" style="animation-delay: 0.2s;" />
+            <img src="/marc_chirinos/img/agr.jpg" alt="" class="exp-image fade-in-right" style="animation-delay: 0.4s;" />
+            <img src="/marc_chirinos/img/agr2.jpg" alt="" class="exp-image fade-in-right" style="animation-delay: 0.6s;" />
           </div>
         </div>
         
@@ -252,6 +258,25 @@ import LogoCarousel from './LogoCarousel.astro';
       </div>
 
 
+    </div>
+  </section>
+
+  <section class="mt-30">
+    <div class="pl-55">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-center lg:text-left">Habilidades</h2>
+      <div>
+        <div>
+          <p class="text text-2xl">Cumplimiento de estándares orgánicos (EU 2021/1165, USDA 7 CFR Part 205, JAS 1605, DS 044-2006)</p>
+        </div>
+
+        <div>
+          <p class="text text-2xl">Asesoramiento en registro de plaguicidas (DS 001-2015, Resolution 2075)</p>
+        </div>
+
+        <div>
+          <p class="text text-2xl">Office 365 Competencia intermedia)</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -273,8 +298,19 @@ import LogoCarousel from './LogoCarousel.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/marc_chirinos/img/hojas3.avif') center/cover no-repeat;
-    opacity: 0.05;
+    background-image: 
+      radial-gradient(circle at 15% 20%, rgba(15, 155, 15, 0.12) 0%, transparent 8%),
+      radial-gradient(circle at 85% 30%, rgba(6, 78, 6, 0.10) 0%, transparent 10%),
+      radial-gradient(circle at 50% 60%, rgba(15, 155, 15, 0.08) 0%, transparent 12%),
+      radial-gradient(circle at 25% 75%, rgba(6, 78, 6, 0.09) 0%, transparent 7%),
+      radial-gradient(circle at 70% 15%, rgba(15, 155, 15, 0.11) 0%, transparent 9%),
+      radial-gradient(circle at 40% 35%, rgba(6, 78, 6, 0.07) 0%, transparent 6%),
+      radial-gradient(circle at 90% 70%, rgba(15, 155, 15, 0.10) 0%, transparent 11%),
+      radial-gradient(circle at 10% 85%, rgba(6, 78, 6, 0.08) 0%, transparent 8%),
+      radial-gradient(circle at 60% 90%, rgba(15, 155, 15, 0.09) 0%, transparent 10%),
+      radial-gradient(circle at 30% 50%, rgba(6, 78, 6, 0.06) 0%, transparent 5%),
+      linear-gradient(180deg, rgba(15, 155, 15, 0.02) 0%, transparent 100%);
+    opacity: 1;
     z-index: 1;
   }
 
@@ -330,6 +366,64 @@ import LogoCarousel from './LogoCarousel.astro';
     50% {
       transform: translateY(15px);
     }
+  }
+
+  /* Animaciones de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fade-in-up {
+    opacity: 0;
+  }
+
+  .fade-in-left {
+    opacity: 0;
+  }
+
+  .fade-in-right {
+    opacity: 0;
+  }
+
+  .fade-in-up.animate {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fade-in-left.animate {
+    animation: fadeInLeft 0.9s ease-out forwards;
+  }
+
+  .fade-in-right.animate {
+    animation: fadeInRight 0.9s ease-out forwards;
   }
 
   .skills-section {
@@ -525,3 +619,25 @@ import LogoCarousel from './LogoCarousel.astro';
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos los elementos con animaciones
+    const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+    animatedElements.forEach(el => observer.observe(el));
+  });
+</script>
