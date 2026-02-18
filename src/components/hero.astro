@@ -967,6 +967,9 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     margin-top: -45px;
     transform-origin: center;
     animation: counterRotate 40s linear infinite;
+    cursor: pointer;
+    z-index: 5;
+    touch-action: manipulation;
   }
 
   @keyframes counterRotate {
@@ -998,6 +1001,10 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     color: #0f9b0f;
     position: relative;
     overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .service-icon-wrapper::before {
@@ -1016,19 +1023,22 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
   }
 
   .service-wheel-item:hover .service-icon-wrapper,
-  .service-wheel-item.active .service-icon-wrapper {
+  .service-wheel-item.active .service-icon-wrapper,
+  .service-wheel-item:active .service-icon-wrapper {
     transform: scale(1.2);
     box-shadow: 0 12px 32px rgba(15, 155, 15, 0.4);
     border-color: #064e06;
   }
 
   .service-wheel-item:hover .service-icon-wrapper::before,
-  .service-wheel-item.active .service-icon-wrapper::before {
+  .service-wheel-item.active .service-icon-wrapper::before,
+  .service-wheel-item:active .service-icon-wrapper::before {
     opacity: 1;
   }
 
   .service-wheel-item:hover .service-icon-wrapper i,
-  .service-wheel-item.active .service-icon-wrapper i {
+  .service-wheel-item.active .service-icon-wrapper i,
+  .service-wheel-item:active .service-icon-wrapper i {
     color: white;
   }
 
@@ -1102,44 +1112,17 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     }
   }
 
-  .service-detail-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #064e06, #0f9b0f);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 30px rgba(15, 155, 15, 0.3);
-    animation: iconBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  @keyframes iconBounce {
-    0% {
-      transform: scale(0) rotate(-180deg);
-    }
-    60% {
-      transform: scale(1.1) rotate(10deg);
-    }
-    100% {
-      transform: scale(1) rotate(0deg);
-    }
-  }
-
   .service-detail h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: #111827;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.3;
   }
 
   .service-detail p {
-    font-size: 1.375rem;
-    color: #6b7280;
+    font-size: 1.5rem;
+    color: #4b5563;
     line-height: 1.8;
   }
 
@@ -1156,16 +1139,17 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     }
 
     .service-wheel-item {
-      width: 70px;
-      height: 70px;
-      margin-left: -35px;
-      margin-top: -35px;
+      width: 80px;
+      height: 80px;
+      margin-left: -40px;
+      margin-top: -40px;
+      padding: 8px;
     }
 
     .service-icon-wrapper {
-      width: 70px;
-      height: 70px;
-      font-size: 1.5rem;
+      width: 80px;
+      height: 80px;
+      font-size: 1.75rem;
     }
 
     @keyframes counterRotate {
@@ -1194,16 +1178,18 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     }
 
     .service-wheel-item {
-      width: 60px;
-      height: 60px;
-      margin-left: -30px;
-      margin-top: -30px;
+      width: 70px;
+      height: 70px;
+      margin-left: -35px;
+      margin-top: -35px;
+      padding: 10px;
     }
 
     .service-icon-wrapper {
-      width: 60px;
-      height: 60px;
-      font-size: 1.25rem;
+      width: 70px;
+      height: 70px;
+      font-size: 1.5rem;
+      border-width: 2px;
     }
 
     @keyframes counterRotate {
@@ -1221,11 +1207,11 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
     }
 
     .service-detail h3 {
-      font-size: 1.875rem;
+      font-size: 2rem;
     }
 
     .service-detail p {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 </style>
@@ -1373,6 +1359,8 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
 
     const wheelItems = document.querySelectorAll('.service-wheel-item');
     const infoContent = document.getElementById('serviceInfoContent');
+    const servicesWheel = document.getElementById('servicesWheel');
+    let wheelPaused = false;
 
     function showServiceInfo(serviceIndex) {
       const service = servicesData[serviceIndex];
@@ -1383,12 +1371,18 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
       // Agregar clase active al item seleccionado
       wheelItems[serviceIndex].classList.add('active');
 
+      // Pausar la animación de la rueda en móviles
+      if (window.innerWidth <= 768 && !wheelPaused) {
+        servicesWheel.style.animationPlayState = 'paused';
+        wheelItems.forEach(item => {
+          item.style.animationPlayState = 'paused';
+        });
+        wheelPaused = true;
+      }
+
       // Crear el contenido del servicio
       const serviceHTML = `
         <div class="service-detail">
-          <div class="service-detail-icon">
-            <i class="fa-solid ${service.icon}"></i>
-          </div>
           <h3>${service.title}</h3>
           <p>${service.description}</p>
         </div>
@@ -1407,10 +1401,25 @@ const linkedinUrl = "https://www.linkedin.com/in/machirinos-regulation/";
 
     // Agregar event listeners a cada item de la rueda
     wheelItems.forEach((item, index) => {
+      // Click para desktop
       item.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         showServiceInfo(index);
       });
+
+      // Touch events para móviles
+      item.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showServiceInfo(index);
+      }, { passive: false });
+
+      // Mejorar la retroalimentación visual en mobile
+      item.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }, { passive: false });
     });
 
     // Estilo de transición para el contenido
